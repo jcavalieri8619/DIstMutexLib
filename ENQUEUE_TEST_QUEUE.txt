@@ -1,0 +1,128 @@
+PRODUCE     
+
+FLAVOR_0    
+
+Message Type: REQUEST
+Action: PRODUCE
+subAction: FLAVOR_0
+node_ID: 1
+time_stamp: 0
+received_replies: N_0: true,  N_1: true,  N_2: true,  N_3: false,  N_4: true,  
+local_message: NULL
+
+Message Type: REQUEST
+Action: PRODUCE
+subAction: FLAVOR_0
+node_ID: 3
+time_stamp: 2
+received_replies: N_0: false,  N_1: false,  N_2: false,  N_3: true,  N_4: false,  
+local_message: NULL
+
+Message Type: REQUEST
+Action: PRODUCE
+subAction: FLAVOR_0
+node_ID: 1
+time_stamp: 3
+received_replies: N_0: true,  N_1: true,  N_2: true,  N_3: false,  N_4: true,  
+local_message: NULL
+
+
+
+CONSUME     
+
+FLAVOR_0    
+
+
+
+PRODUCE     
+
+FLAVOR_1    
+
+
+
+CONSUME     
+
+FLAVOR_1    
+
+Message Type: REQUEST
+Action: CONSUME
+subAction: FLAVOR_1
+node_ID: 1
+time_stamp: 1
+received_replies: N_0: true,  N_1: true,  N_2: true,  N_3: false,  N_4: true,  
+local_message: NULL
+
+Message Type: REQUEST
+Action: CONSUME
+subAction: FLAVOR_1
+node_ID: 3
+time_stamp: 1
+received_replies: N_0: false,  N_1: false,  N_2: false,  N_3: true,  N_4: false,  
+local_message: NULL
+
+Message Type: REQUEST
+Action: CONSUME
+subAction: FLAVOR_1
+node_ID: 1
+time_stamp: 6
+received_replies: N_0: true,  N_1: true,  N_2: true,  N_3: false,  N_4: true,  
+local_message: NULL
+
+
+
+PRODUCE     
+
+FLAVOR_2    
+
+Message Type: REQUEST
+Action: PRODUCE
+subAction: FLAVOR_2
+node_ID: 3
+time_stamp: 0
+received_replies: N_0: false,  N_1: false,  N_2: false,  N_3: true,  N_4: false,  
+local_message: NULL
+
+Message Type: REQUEST
+Action: PRODUCE
+subAction: FLAVOR_2
+node_ID: 1
+time_stamp: 4
+received_replies: N_0: true,  N_1: true,  N_2: true,  N_3: false,  N_4: true,  
+local_message: NULL
+
+
+
+CONSUME     
+
+FLAVOR_2    
+
+
+
+PRODUCE     
+
+FLAVOR_3    
+
+
+
+CONSUME     
+
+FLAVOR_3    
+
+Message Type: REQUEST
+Action: CONSUME
+subAction: FLAVOR_3
+node_ID: 1
+time_stamp: 2
+received_replies: N_0: true,  N_1: true,  N_2: true,  N_3: false,  N_4: true,  
+local_message: NULL
+
+Message Type: REQUEST
+Action: CONSUME
+subAction: FLAVOR_3
+node_ID: 1
+time_stamp: 5
+received_replies: N_0: true,  N_1: true,  N_2: true,  N_3: false,  N_4: true,  
+local_message: NULL
+
+
+

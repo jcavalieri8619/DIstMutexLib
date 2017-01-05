@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="97">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>client_interface.hpp</itemPath>
+      <itemPath>client_utils.hpp</itemPath>
+      <itemPath>globals.hpp</itemPath>
+      <itemPath>message_buffer.hpp</itemPath>
+      <itemPath>node_controller.hpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>cli_interface.cpp</itemPath>
+      <itemPath>client_utils.cpp</itemPath>
+      <itemPath>incomingMsg_handler.cpp</itemPath>
+      <itemPath>internal_utils.cpp</itemPath>
+      <itemPath>localComm_monitor.cpp</itemPath>
+      <itemPath>localComm_sender.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+      <itemPath>outgoingReply_handler.cpp</itemPath>
+      <itemPath>remoteComm_monitor.cpp</itemPath>
+      <itemPath>remoteComm_sender.cpp</itemPath>
+      <itemPath>requestQueue_manager.cpp</itemPath>
+      <itemPath>requestQueue_notifier.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+      <logicalFolder name="f3"
+                     displayName="Incoming_Msg_Handler_Test"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>tests/IncomingMsgTester.cpp</itemPath>
+        <itemPath>tests/IncomingMsgTester.hpp</itemPath>
+        <itemPath>tests/newtestrunner1.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2"
+                     displayName="local_comm_monitor_tests"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>tests/localMonitorTester.cpp</itemPath>
+        <itemPath>tests/localMonitorTester.hpp</itemPath>
+        <itemPath>tests/newtestrunner.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f1"
+                     displayName="remote_comm_monitor_tests"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>tests/remoteCommMonitor_tester.cpp</itemPath>
+        <itemPath>tests/remoteMonitorTestClass.cpp</itemPath>
+        <itemPath>tests/remoteMonitorTestClass.hpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f4"
+                     displayName="Ricart_RqstQ_Tests"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>request_queue_tests/RicartRequestQ_Tests.cpp</itemPath>
+        <itemPath>request_queue_tests/RicartRequestQ_Tests.hpp</itemPath>
+        <itemPath>request_queue_tests/newtestrunner2.cpp</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <standard>11</standard>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibStdlibItem>PosixThreads</linkerLibStdlibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="cli_interface.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="client_interface.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="client_utils.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="client_utils.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <folder path="TestFiles">
+        <linkerTool>
+          <linkerLibItems>
+            <linkerOptionItem>`pkg-config --libs cppunit`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f1">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>/usr/include/cppunit</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+          <linkerLibItems>
+            <linkerLibLibItem>cppunit</linkerLibLibItem>
+            <linkerLibStdlibItem>DynamicLinking</linkerLibStdlibItem>
+          </linkerLibItems>
+          <commandLine>-Wl,--no-as-needed</commandLine>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f2">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f3">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f3</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f4">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f4</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <item path="globals.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="incomingMsg_handler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="internal_utils.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="localComm_monitor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="localComm_sender.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="message_buffer.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="node_controller.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="outgoingReply_handler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="remoteComm_monitor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="remoteComm_sender.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="requestQueue_manager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="requestQueue_notifier.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="request_queue_tests/RicartRequestQ_Tests.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="request_queue_tests/RicartRequestQ_Tests.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="request_queue_tests/newtestrunner2.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="tests/IncomingMsgTester.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/IncomingMsgTester.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/localMonitorTester.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/localMonitorTester.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/newtestrunner.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/newtestrunner1.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/remoteCommMonitor_tester.cpp" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <additionalDep></additionalDep>
+        </ccTool>
+      </item>
+      <item path="tests/remoteMonitorTestClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/remoteMonitorTestClass.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="cli_interface.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="client_interface.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="client_utils.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="client_utils.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <folder path="TestFiles/f1">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f2">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f3">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f3</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f4">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f4</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <item path="globals.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="incomingMsg_handler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="internal_utils.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="localComm_monitor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="localComm_sender.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="message_buffer.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="node_controller.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="outgoingReply_handler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="remoteComm_monitor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="remoteComm_sender.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="requestQueue_manager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="requestQueue_notifier.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="request_queue_tests/RicartRequestQ_Tests.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="request_queue_tests/RicartRequestQ_Tests.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="request_queue_tests/newtestrunner2.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="tests/IncomingMsgTester.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/IncomingMsgTester.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/localMonitorTester.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/localMonitorTester.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/newtestrunner.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/newtestrunner1.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/remoteCommMonitor_tester.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/remoteMonitorTestClass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/remoteMonitorTestClass.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
