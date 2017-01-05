@@ -19,9 +19,8 @@ namespace clientUtils
 {
 
 
-
-
-    extern const char* ClientSock_template;
+    static const char*
+    ClientSock_template( "/tmp/local_client_sock_%u.sock" );
 
     enum class MESSAGE_T : uint32_t
     {
