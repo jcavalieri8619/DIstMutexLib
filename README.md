@@ -1,5 +1,5 @@
 
-
-Custom Distributed Mutex Library written in C++
+My implementation of Ricart–Agrawala algorithm for distributed Mutex
+Written in C++
 
 Operating Systems class
